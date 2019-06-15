@@ -1,0 +1,181 @@
+@import "vars";
+@import "fonts";
+@import "libs";
+
+@import "../libs/bourbon/core/bourbon";
+@import "../libs/bootstrap/scss/bootstrap-grid";
+@import "../libs/hamburgers/_sass/hamburgers/hamburgers";
+
+@import "variables";
+@import "header";
+
+
+
+::placeholder {
+  color: #666;
+}
+
+::selection {
+  background-color: $accent;
+  color: #fff;
+}
+
+body {
+  font-size: 14px;
+  min-width: 320px;
+  position: relative;
+  line-height: 1.65;
+  font-family: $default-font;
+  overflow-x: hidden;
+  color: $text;
+
+  input, textarea {
+    border: #666 1px solid;
+    outline: none;
+
+    &:focus:required:invalid {
+      border-color: red;
+    }
+
+    &:required:valid {
+      border-color: green;
+    }
+  }
+}
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+
+  &.img-width {
+    width: 100%;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+a, a:hover, a:focus, a:active {
+color: $main-color;
+text-decoration: underline;
+}
+.headers {
+  font-family: "PFCentroSlabProMedium", sans-serif;
+  text-transform: uppercase;
+  font-weight: normal;
+  color: $headers-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @extend .headers;
+  line-height: 30px;
+}
+
+h1 {
+  font-size: 48px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+
+b, strong {
+  font-family: $ralewaybold;
+  font-weight: normal;
+}
+
+.before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.ulmnu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  li {
+    display: inline-block;
+  }
+}
+
+.trans {
+  transition: all .5s ease;
+}
+
+.homesect {
+  padding-top: 80px;
+  background-color: #f9f9f9;
+  .section-bottom {
+    margin-top: 70px;
+    background-color: #e5e5e5;
+    padding: 50px 0;
+    text-align: center;
+    a.button {
+
+    }
+  }
+}
+
+.section-head {
+  margin-bottom: 80px;
+  h2 {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: '';
+      height: 4px;
+      background-color: $main-color;
+      width: 165px;
+      display: inline-block;
+      bottom: -20px;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+      transform: translateX(-50%);
+
+    }
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  p {
+    margin-top: 50px;
+    a {
+      font-family: sans-serif;
+    }
+  }
+}
+
+.homesect {
+  position: relative;
+  &::before {
+    content: '';
+    height: 6px;
+    width: 100%;
+    background-image: url(../img/bah_1.png);
+    position: absolute;
+    top: -6px;
+    display: block;
+    z-index: 2;
+  }
+}
+
+
+@import "media"; // Always at the end

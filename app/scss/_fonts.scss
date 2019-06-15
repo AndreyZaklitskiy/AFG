@@ -1,0 +1,8 @@
+@import "_mixins/font-face";
+
+@include font-face("PFCentroSlabProBold", "../fonts/PFCentroSlabProBold/PFCentroSlabProBold", bold);
+@include font-face("PFCentroSlabProMedium", "../fonts/PFCentroSlabProMedium/PFCentroSlabProMedium", medium);
+@include font-face("RalewayBold", "../fonts/RalewayBold/RalewayBold", bold);
+@include font-face("RalewayRegular", "../fonts/RalewayRegular/RalewayRegular", regular);
+@include font-face("RalewaySemiBold", "../fonts/RalewaySemiBold/RalewaySemiBold", bold);
+@include font-face("RobotoBold", "../fonts/RobotoBold/RobotoBold", bold);

@@ -1,0 +1,249 @@
+header.main-head {
+  position: relative;
+  min-height: 620px;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 120px;
+  h1 {
+    text-transform: none;
+    line-height: 50px;
+    padding-bottom: 10px;
+  }
+  &:before {
+    @extend .before;
+    background-color: #394b5f;
+    opacity: .85;
+  }
+}
+.top-line {
+  padding-top: 45px;
+  min-height: 160px;
+  background-image: url(../img/top_gradient.png);
+  background-repeat: repeat-x;
+}
+
+.logo {
+  opacity: .95;
+  img {
+    width: 100px;
+  }
+}
+.main-mnu {
+  font-size: 14px;
+  ul {
+    @extend .ulmnu;
+  }
+  li {
+    line-height: 48px;
+    padding: 0 10px;
+    &.active {
+      a {
+        color: $main-color;
+        text-decoration: underline;
+      }
+    }
+  }
+  a {
+    text-decoration: none;
+    color: #ffffff;
+    &:hover {
+        color: $main-color;
+        text-decoration: underline;
+    }
+  }
+}
+
+
+.phone-wrap {
+  position: relative;
+  .phone {
+    opacity: 0.9;
+    color: #ffffff;
+    font-family: $robotobold;
+    font-size: 20px;
+    line-height: 48px;
+    text-align: right;
+    width: 100%;
+    white-space: nowrap;
+  }
+  .toggle-mnu {
+    display: block;
+    float: right;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 28px;
+    height: 30px;
+    text-align: center;
+
+  }
+}
+.hamburger-box {
+  width: 28px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.hamburger-inner {
+  background-color: #ffffff;
+  width: 28px;
+  height: 2px;
+  &:before {
+    background-color: #ffffff;
+    width: 28px;
+    height: 2px;
+  }
+  &:after {
+    background-color: #ffffff;
+    width: 28px;
+    height: 2px;
+  }
+}
+.hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner::after, .hamburger.is-active .hamburger-inner::before {
+  background-color: #ffffff;
+}
+
+
+.header-wrap {
+  margin-top: 40px;
+  h1 {
+    margin-top: 120px;
+    color: #fff;
+    border-bottom: 8px $main-color solid;
+    display: inline-block;
+  }
+  ul {
+    list-style-type: none;
+    margin: 35px 0 0 0;
+    padding: 0;
+    li {
+      position: relative;
+      display: block;
+      font-family: $ralewaysemibold;
+      margin-bottom: 12px;
+      padding-left: 16px;
+      &::before {
+        content: '';
+        display: block;
+        @include triangle("right", 6px, 11px, $main-color);
+        position: absolute;
+        top: 11px;
+        left: 0;
+      }
+      a {
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 18px;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+.header-left {
+  margin-bottom: 50px;
+}
+
+.forms {
+  background-color: transparentize(#243343, .2);
+  padding: 35px 35px 30px;
+  color: #97a4b2;
+  font-size: 14px;
+  border-bottom: 3px solid #1A222B;
+  h4 {
+    color: #ffffff;
+    font-family: $pfcmedium;
+    font-size: 30px;
+    text-transform: none;
+    margin: 0;
+  }
+  p {
+    line-height: 23px;
+    margin-top: 15px;
+  }
+  label {
+    display: block;
+    margin-top: 22px;
+    margin-bottom: 20px;
+  }
+  span {
+    display: block;
+    margin-bottom: 6px;
+    letter-spacing: 1.5px;
+    color: #778390;
+  }
+  input {
+    display: block;
+    width: 100%;
+    background-color: #3c485a;
+    border: none;
+    box-shadow: 0 -3px #1F2A36;
+    text-indent: 10px;
+    padding: 10px 0;
+    color: #778390;
+    transition: all .5s ease;
+    font-family: $pfcmedium;
+    font-size: 18px;
+    &:focus {
+      box-shadow: 0 -6px #1F2A36;
+      background-color: #394E65;
+    }
+  }
+  .buttons {
+    margin-top: 10px;
+  }
+}
+.button-wrap {
+  text-align: center;
+}
+.buttons {
+  display: inline-block;
+  border: none;
+  background-color: $main-color;
+  color: #111111;
+  font-family: $pfcbold;
+  font-size: 20px;
+  padding: 9px 30px;
+  border-bottom: 3px solid #a7711b;
+  transition: all .5s ease;
+  text-decoration: none;
+  &:hover {
+    background-color: #FFB338;
+    text-decoration: none;
+    color: #111111;
+  }
+  &:active {
+    background-color: #db8c0e;
+    text-decoration: none;
+    color: #111111;
+  }
+  &:focus {
+    color: #111111;
+    text-decoration: none;
+  }
+}
+.arrow-wrap {
+  @extend .button-wrap;
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.arrow-down {
+  width: 40px;
+  height: 40px;
+  background-image: url(../img/arrow_down.png);
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+
+}

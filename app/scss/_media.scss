@@ -1,0 +1,105 @@
+@import "vars";
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
+@include media-breakpoint-down(lg) {
+	.main-mnu {
+      display: none;
+      min-width: 295px;
+      float: right;
+      text-align: right;
+      background-color: #1c242c;
+      margin-top: 10px;
+      border-bottom: 3px solid #000000;
+      position: absolute;
+      right: 15px;
+      z-index: 2;
+      ul {
+        li {
+          display: block;
+          line-height: 0;
+          padding: 0;
+          border-bottom: 1px solid #ffffff;
+        }
+        a {
+          display: block;
+          line-height: 48px;
+          padding: 0 20px;
+          font-size: 18px;
+          background-color: transparent;
+          transition: all .5s ease;
+          &:hover {
+            background-color: #273647;
+
+          }
+        }
+      }
+    }
+    .phone {
+      padding-right: 65px;
+    }
+}
+
+// ≥992px
+@include media-breakpoint-down(md) {
+  .header-wrap {
+    margin-top: 0;
+    h1 {
+      margin-top: 0;
+    }
+  }
+}
+
+// ≥768px
+@include media-breakpoint-down(sm) {
+
+}
+
+// ≥576px
+@include media-breakpoint-down(xs) {
+  .logo {
+    img {
+      width: 70px;
+    }
+  }
+  .phone-wrap {
+    .phone {
+      font-size: 18px;
+      line-height: 34px;
+      padding-right: 50px;
+    }
+    .toggle-mnu {
+
+    }
+  }
+}
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
+@include media-breakpoint-up(sm) {
+
+}
+
+// ≤768px
+@include media-breakpoint-up(md) {
+
+}
+
+// ≤992px
+@include media-breakpoint-up(lg) {
+
+}
+
+// ≤1200px
+@include media-breakpoint-up(xl) {
+	.main-mnu {
+      display: block !important;
+    }
+    a {
+      outline: none !important;
+    }
+}
