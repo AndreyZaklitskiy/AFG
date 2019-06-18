@@ -50,11 +50,44 @@
       margin-top: 0;
     }
   }
+  .main-mnu {
+    top: 50px;
+  }
+  .top-line {
+    min-height: 140px;
+  }
+  .s1-bottom-triangle {
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+  .info-item {
+    margin: 40px 0;
+  }
+}
+.info-item-wrap {
+  &:nth-child(2) {
+    .info-item {
+      margin-top: 0;
+    }
+  }
 }
 
 // ≥768px
 @include media-breakpoint-down(sm) {
-
+  .section-head {
+    margin-bottom: 20px;
+  }
+  .info-item {
+    margin: 25px 0;
+    max-width: 100%;
+    padding-left: 0;
+  }
+  .section-content {
+    padding-bottom: 220px;
+  }
+  .info-item:first-child {
+    margin-top: 40px;
+  }
 }
 
 // ≥576px
@@ -62,6 +95,7 @@
   .logo {
     img {
       width: 70px;
+
     }
   }
   .phone-wrap {
@@ -72,6 +106,11 @@
     }
     .toggle-mnu {
 
+    }
+  }
+  .info-item {
+    &:first-child {
+      margin-top: 0;
     }
   }
 }
